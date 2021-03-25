@@ -1,3 +1,9 @@
-# 프로그래머를 위한 강화학습
-Reinforcement Learning For Programmer
-hello nice 
+ “프로그래머를 위한 강화학습” 도서와 온라인강의 소스코드를 제공하는 사이트입니다.
+ 
+ 코드에 사용한 프로그램 버전은 다음과 같습니다.
+ python3.7.7
+ tensorflow2.2
+ numpy1.19.3
+ 
+ 도서는 http://www.yes24.com/Product/Goods/98859577에서 구입할 수 있습니다.
+ 동영상 강의는 현재 준비중입니다.
