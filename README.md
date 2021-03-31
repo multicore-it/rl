@@ -9,8 +9,7 @@
  
  
 ## 도서는 [Yes24](http://www.yes24.com/Product/Goods/98859577) 에서 구입할 수 있습니다.
-
-## 동영상 강의는 현재 준비중입니다.  
+## 동영상 강의는 [인프런](https://www.inflearn.com/course/프로그래머를-위한-강화학습?inst=4aa5e302) 에서 들을 수 있습니다.
 
 
 ## 목차
