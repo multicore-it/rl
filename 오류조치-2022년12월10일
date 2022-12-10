@@ -1,0 +1,25 @@
+제가 강의를 올린 후 관련 패키지가 많은 변화가 있었습니다.
+다음과 같은 3가지 종류 오류가 발생할 수 있습니다.
+1번 오류는 protoc 패키지가 변경된 원인으로 발생하고 있습니다.
+protobuf 패키지를 삭제하사고 3.8 버전을 설치하시면 문제를 해결할 수 있습니다.
+2번 오류는 gym 패키지에서 제공하는 reset함수 문제입니다. 반환값을 dictionary로 주기 때문에 첫번째 값을 선택하는 state[0] 코드를 추가하면 문제가 해결됩니다.
+3번 오류는 gym 패키지에서 제공하는 step 함수의 반환값이 하나 더 추가되어 발생하는 문제입니다. 수신부에 none2 변수를 하나더 추가하면 해결할 수 있습니다.
+
+1. 예제 프로그램 실행 시 다음과 같이 오류 발생
+TypeError: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+1. 해결방법
+pip uninstall protobuf
+pip install protobuf==3.8
+
+
+2. dictionary 처리 해결방법
+state = env.reset()
+state = state[0] #코드추가
+
+3. return값 추가 부분 해결방법
+state_next, reward, done, none, none2 = self.env.step(action)
